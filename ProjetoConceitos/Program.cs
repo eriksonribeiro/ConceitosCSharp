@@ -214,11 +214,31 @@ namespace ProjetoConceitos
             */
             #endregion
 
-            #region
-            ConvertNumber converting = new ConvertNumber("1");
-            Console.WriteLine(converting.TryConvertion());
+            #region Convert
+            //ConvertNumber converting = new ConvertNumber("1");
+            //Console.WriteLine(converting.TryConvertion());
             #endregion
-            Console.WriteLine("Hello");
+
+            #region Enum
+            Order order = new Order
+            {
+                Id = 1,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+            Console.WriteLine(order);
+
+            //Enum ToString()
+            string txt = OrderStatus.PendingPayment.ToString();
+            Console.WriteLine(txt);
+
+            //String To Enum
+            OrderStatus os;
+            Enum.TryParse("Delivered", out os);
+            Console.WriteLine(os);
+            #endregion
+
+           // Console.WriteLine("Hello");
 
             Console.ReadKey();
         }
