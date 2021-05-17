@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10C90C67-5A33-4BD0-9A76-56A8190F8F27}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CSharpConcepts</RootNamespace>
+    <AssemblyName>CSharpConcepts</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ArraysLists\Matriz.cs" />
+    <Compile Include="Entities\ArraysLists\Pensionato.cs" />
+    <Compile Include="Entities\ArraysLists\UsingParamsModifiers.cs" />
+    <Compile Include="Entities\ArraysLists\WorkingWithArray.cs" />
+    <Compile Include="Entities\ArraysLists\WorkingWithList.cs" />
+    <Compile Include="Entities\Basics\Entrada.cs" />
+    <Compile Include="Entities\Basics\EstruturaCondicional.cs" />
+    <Compile Include="Entities\Basics\EstruturaRepeticaoFor.cs" />
+    <Compile Include="Entities\Basics\EstruturaRepeticaoWhile.cs" />
+    <Compile Include="Entities\Basics\EstruturaSequencial.cs" />
+    <Compile Include="Entities\Classes\Aluno.cs" />
+    <Compile Include="Entities\Classes\ConversorDeMoeda.cs" />
+    <Compile Include="Entities\Classes\Funcionario.cs" />
+    <Compile Include="Entities\Classes\Pessoa.cs" />
+    <Compile Include="Entities\Classes\Produto.cs" />
+    <Compile Include="Entities\Classes\Retangulo.cs" />
+    <Compile Include="Entities\Classes\Triangulo.cs" />
+    <Compile Include="Entities\Constructors\NovoProduto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
