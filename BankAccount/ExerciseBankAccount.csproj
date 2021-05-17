@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{10C90C67-5A33-4BD0-9A76-56A8190F8F27}</ProjectGuid>
+    <ProjectGuid>{B2BC03AE-9B3C-4A2A-96F6-5E220A96D5BC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CSharpConcepts</RootNamespace>
-    <AssemblyName>CSharpConcepts</AssemblyName>
+    <RootNamespace>ExerciseBankAccount</RootNamespace>
+    <AssemblyName>ExerciseBankAccount</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,30 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\ArraysLists\Matriz.cs" />
-    <Compile Include="Entities\ArraysLists\Pensionato.cs" />
-    <Compile Include="Entities\ArraysLists\UsingParamsModifiers.cs" />
-    <Compile Include="Entities\ArraysLists\WorkingWithArray.cs" />
-    <Compile Include="Entities\ArraysLists\WorkingWithList.cs" />
-    <Compile Include="Entities\Basics\ConvertNumber.cs" />
-    <Compile Include="Entities\Basics\Entrada.cs" />
-    <Compile Include="Entities\Basics\EstruturaCondicional.cs" />
-    <Compile Include="Entities\Basics\EstruturaRepeticaoFor.cs" />
-    <Compile Include="Entities\Basics\EstruturaRepeticaoWhile.cs" />
-    <Compile Include="Entities\Basics\EstruturaSequencial.cs" />
-    <Compile Include="Entities\Classes\Aluno.cs" />
-    <Compile Include="Entities\Classes\ConversorDeMoeda.cs" />
-    <Compile Include="Entities\Classes\Funcionario.cs" />
-    <Compile Include="Entities\Classes\Pessoa.cs" />
-    <Compile Include="Entities\Classes\Produto.cs" />
-    <Compile Include="Entities\Classes\Retangulo.cs" />
-    <Compile Include="Entities\Classes\Triangulo.cs" />
-    <Compile Include="Entities\Constructors\NovoProduto.cs" />
+    <Compile Include="Entities\BankAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

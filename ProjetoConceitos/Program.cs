@@ -213,6 +213,11 @@ namespace ProjetoConceitos
              Matriz.ExercicioMatriz();
             */
             #endregion
+
+            #region
+            ConvertNumber converting = new ConvertNumber("1");
+            Console.WriteLine(converting.TryConvertion());
+            #endregion
             Console.WriteLine("Hello");
 
             Console.ReadKey();
