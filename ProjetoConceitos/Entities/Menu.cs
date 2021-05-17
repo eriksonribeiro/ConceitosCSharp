@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text.RegularExpressions;
 using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace ProjetoConceitos
 {
@@ -222,8 +222,9 @@ namespace ProjetoConceitos
             //ConvertNumber converting = new ConvertNumber("1");
             //Console.WriteLine(converting.TryConvertion());
             #endregion
-
-            #region Enum
+        }
+        public static void ShowEnum()
+        {
             Order order = new Order
             {
                 Id = 1,
@@ -240,17 +241,59 @@ namespace ProjetoConceitos
             OrderStatus os;
             Enum.TryParse("Delivered", out os);
             Console.WriteLine(os);
-            #endregion
+        }
 
-            #region ExtensionMethods
-            //DateTime dt = new DateTime(2018, 11, 16, 8, 10, 45);
-            //Console.WriteLine(dt.ElapsedTime());
+        public static void ExtensionMethods()
+        {
+            DateTime dt = new DateTime(2018, 11, 16, 8, 10, 45);
+            Console.WriteLine(dt.ElapsedTime());
 
-            //Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("---------------------------------------------");
 
-            //String s1 = "Good morning dear students!";
-            //Console.WriteLine(s1.Cut(10));
-            #endregion
+            String s1 = "Good morning dear students!";
+            Console.WriteLine(s1.Cut(10));
+        }
+
+        public static void ShowRegex()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("Hello ");
+            stringBuilder.Append("Word!");
+
+            var result = Regex.IsMatch(stringBuilder.ToString(), "a", RegexOptions.None);
+            if (result)
+                Console.WriteLine(stringBuilder);
+            else
+                Console.WriteLine("Not Found");
+        }
+
+        public static void ShowListManipilation()
+        {
+            List<int> intList = new List<int>();
+            List<int> intList2 = new List<int>();
+
+            intList.Add(3);
+            intList.Add(4);
+            intList.Add(5);
+            intList.Add(1);
+            intList.Add(2);
+            intList.Add(6);
+
+            intList.Remove(4);
+            intList.Sort();
+
+            foreach (int item in intList)
+            {
+                if (item == 6)
+                    intList2.Add(item);
+            }
+
+            var count = intList2.Count();
+
+            intList2.InsertRange(count++, intList);
+
+            foreach (var item in intList2)
+                Console.WriteLine($"{item}");
         }
     }
 }

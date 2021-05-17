@@ -7,8 +7,8 @@ namespace ProjetoConceitos
         static void Main(string[] args)
         {
             Menu.Show();
-            // Console.WriteLine("Hello");
-
+            Menu.ShowRegex();
+            Menu.ShowListManipilation();
             Console.ReadKey();
         }
     }
